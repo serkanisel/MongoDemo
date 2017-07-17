@@ -20,7 +20,7 @@ namespace MongoDemo.App_Start
             var MongoUsername = ConfigurationManager.AppSettings["MongoUsername"];
             var MongoPassword = ConfigurationManager.AppSettings["MongoPassword"];
             var MongoPort= ConfigurationManager.AppSettings["MongoPort"];
-            var MongoHost = ConfigurationManager.AppSettings["MongoPort"];
+            var MongoHost = ConfigurationManager.AppSettings["MongoHost"];
 
             var credential = MongoCredential.CreateMongoCRCredential(MongoDatabaseName, MongoUsername, MongoPassword);
 
