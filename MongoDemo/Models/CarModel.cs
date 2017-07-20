@@ -10,7 +10,7 @@ namespace MongoDemo.Models
     public class CarModel
     {
         [BsonId]
-        public ObjectId Id {get;set;}
+        public ObjectId Id { get; set; }
 
         [BsonElement("Carname")]
         public string Carname { get; set; }
@@ -19,7 +19,7 @@ namespace MongoDemo.Models
         public string Color { get; set; }
 
         [BsonElement("Price")]
-        public int Price  { get; set; }
+        public int Price { get; set; }
 
         [BsonElement("Engineno")]
         public string Engineno { get; set; }
@@ -35,5 +35,20 @@ namespace MongoDemo.Models
 
         [BsonElement("Chassisno")]
         public string Chassisno { get; set; }
+
+        List<Company> Companies { get; set; }
+    }
+
+    public class Company
+    {
+        [BsonId]
+        public ObjectId Id { get; set; }
+
+        [BsonElement("CompanyName")]
+        public string CompanyName { get; set; }
+
+        [BsonElement("Address")]
+        public string Address { get; set; }
+
     }
 }
